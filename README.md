@@ -1,2 +1,3 @@
 # Simple-Command-line-App
-This is a command line app with CRUD functionality.
+This command line app have basic CRUD functionality.
+It is my first application without using any third party library.
