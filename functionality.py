@@ -1,3 +1,4 @@
+from cmd_colors import text_color
 
 def press_validation(press):    # Check
     # This block verify that user input must be a number 'a' 'd' and 'r'.
@@ -14,7 +15,8 @@ def input_loop():   # Check
 
     inp = None
     inp_list = list()
-    print(f"\nEnter names, (press enter to skip).")
+    message = f"[cyan]\nEnter names, (press enter to skip)."
+    print(text_color(message))
 
     while inp != "":
         inp = input(">")
@@ -46,10 +48,12 @@ def sorted_names(inp, names_to_sort):
     print()
     if inp.lower() == 'y':
         for name in sorted(names_to_sort):
-            print(name.title())
+            message = "[cyan]" + name.title()
+            print(text_color(message))
     else:
         for name in names_to_sort:
-            print(name)
+            message = "[cyan]" + name
+            print(message)
 
 
 def number_validation(number, message):
