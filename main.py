@@ -1,15 +1,15 @@
 from functionality import press_validation, input_loop, delete_names, sorted_names, make_file
-
+from cmd_colors import text_color
 
 def main():
     # global inp, storage, input_array, message
     # Initialzing main variables
-    message = "\nEnter name of your friends you want to invite in your party."
+    message = "\n[yellow]Enter name of your friends you want to invite in your party.[reset]"
     storage = []        # Main storage variable.
     input_array = []    # Partial storage variable.
     inp = None          # Defaul input variable.
 
-    print(message)
+    print(text_color(message))
     # Main loop.
     while True:
 
@@ -22,10 +22,11 @@ def main():
             storage.extend(input_array)
             print(f"You have entered {len(input_array)} names.")
 
-        print("\nPress 'a' to Add names.")
-        print("Press 'd' to Delete names.")
-        print("Press 'r' to Read all names.")
-        print("Press 'e' to Exit.\n")
+        message = "\n[yellow]Press 'a' to Add names.\nPress 'd' to Delete names.\nPress 'r' to Read all names.\nPress 'e' to Exit."
+        print(text_color(message))
+        # print("Press 'd' to Delete names.")
+        # print("Press 'r' to Read all names.")
+        # print("Press 'e' to Exit.\n")
 
         # This is second conditonal block which handles the wrong input.
         inp = input(">").lower()
