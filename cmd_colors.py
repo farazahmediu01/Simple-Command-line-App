@@ -7,22 +7,24 @@ COLORS = {
     "magenta": "\u001b[35m",
     "cyan": "\u001b[36m",
     "white": "\u001b[37m",
+    "reset": "\u001b[0m",
     "yellow-background": "\u001b[43m",
     "black-background": "\u001b[40m",
     "cyan-background": "\u001b[46;1m",
+    
 }
 # You can add more colors and backgrounds to the dictionary if you like.
 
 
-def color_text(text):
+def text_color(text):
     for color in COLORS:
         text = text.replace("[" + color + "]", COLORS[color])
     return text
 
 
-# Example printing out some text
-hello = "[blue]blue [green]green [red]red [yellow]yellow [black]black [magenta]magenat [cyan]cyan [white]white"
-print(color_text(hello))
+# # Example printing out some text
+# hello = "[blue]blue [green]green [red]red [yellow]yellow [black]black [magenta]magenat [white]white [cyan]cyan [reset]"
+# print(text_color(hello))
 
-text = ">"
-inp = input(color_text(text))
+# text = ">"
+# inp = input(text_color(text))
