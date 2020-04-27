@@ -4,7 +4,7 @@ from cmd_colors import text_color
 def main():
     # global inp, storage, input_array, message
     # Initialzing main variables
-    message = "\n[yellow]Enter name of your friends you want to invite in your party.[reset]"
+    message = "\n[yellow]Enter name of your friends you want to invite in your party."
     storage = []        # Main storage variable.
     input_array = []    # Partial storage variable.
     inp = None          # Defaul input variable.

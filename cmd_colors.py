@@ -16,10 +16,10 @@ COLORS = {
 # You can add more colors and backgrounds to the dictionary if you like.
 
 
-def text_color(text):
+def print_colorful_text(text):
     for color in COLORS:
         text = text.replace("[" + color + "]", COLORS[color])
-    return text
+    print(text)
 
 
 # # Example printing out some text
